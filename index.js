@@ -11,12 +11,12 @@
 
 
 // Invincibility Script
-let oldGameOver = Runner.prototype.gameOver;
+const oldGameOver = Runner.prototype.gameOver;
+const minSpeed = 10;
 let currentSpeed = 10
-let minSpeed = 10;
 Runner.prototype.gameOver = () => {};
 
-var button = document.createElement("Button");
+const button = document.createElement("Button");
 button.innerHTML = "Reset Game Over";
 button.style = "top:0;right:0;position:absolute;z-index:99999;padding:20px;";
 document.body.appendChild(button);
@@ -25,7 +25,7 @@ button.onclick = function(){
 };
 
 
-var button2 = document.createElement("Button");
+const button2 = document.createElement("Button");
 button2.innerHTML = "Set hack";
 button2.style = "top:0;right:150px;position:absolute;z-index:99999;padding:20px;";
 document.body.appendChild(button2);
@@ -33,7 +33,7 @@ button2.onclick = function(){
     Runner.prototype.gameOver = () => {};
 };
 
-var button3 = document.createElement("Button");
+const button3 = document.createElement("Button");
 button3.innerHTML = "Speed +";
 button3.style = "top:0;right:240px;position:absolute;z-index:99999;padding:20px;";
 document.body.appendChild(button3);
@@ -42,7 +42,7 @@ button3.onclick = function(){
     Runner.instance_.setSpeed(currentSpeed)
 };
 
-var button4 = document.createElement("Button");
+const button4 = document.createElement("Button");
 button4.innerHTML = "Speed -";
 button4.style = "top:0;right:330px;position:absolute;z-index:99999;padding:20px;";
 document.body.appendChild(button4);
