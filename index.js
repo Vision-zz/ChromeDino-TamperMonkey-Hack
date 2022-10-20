@@ -51,5 +51,10 @@ button4.onclick = function(){
     Runner.instance_.setSpeed(currentSpeed)
 };
 
-
-
+const button5 = document.createElement("Button");
+button5.innerHTML = "Reset Speed";
+button5.style = "top:0;right:420px;position:absolute;z-index:99999;padding:20px;";
+document.body.appendChild(button5);
+button5.onclick = function(){
+    Runner.instance_.setSpeed(minSpeed)
+};
